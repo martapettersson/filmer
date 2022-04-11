@@ -26,7 +26,7 @@ export default function App() {
 
 	return (
 		<div className="container">
-			<Headline title="Toppfilmer just nu" size={1} />
+			<Headline title="Toppfilmer just nu" size={1} neon={true} />
 			{!downloadReq ? (
 				<DownloadPage downloadMovies={downloadMovies} />
 			) : !showRes || !moviePages ? (
