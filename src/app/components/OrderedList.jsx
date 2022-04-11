@@ -4,6 +4,7 @@ import styled from "styled-components";
 const List = styled.ol`
 	list-style-position: inside;
 	font-size: 16px;
+	line-height: 20px;
 `;
 
 export default function OrderedList({ movies }) {
