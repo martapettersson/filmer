@@ -1,9 +1,10 @@
 import React from "react";
+import Button from "../components/Button";
 
 export default function DownloadPage({ downloadMovies }) {
 	return (
 		<>
-			<button onClick={() => downloadMovies()}>hämta filmer</button>
+			<Button onClick={downloadMovies} title="Hämta filmer" />
 		</>
 	);
 }
