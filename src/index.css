@@ -29,4 +29,5 @@ body {
 	margin: 5vw;
 	grid-row-gap: 1vw;
 	justify-content: center;
+	justify-items: center;
 }
