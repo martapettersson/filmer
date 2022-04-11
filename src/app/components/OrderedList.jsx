@@ -6,7 +6,7 @@ const List = styled.ol`
 	line-height: 20px;
 `;
 const NeonBorder = styled.div`
-	padding: 30px 50px 30px 50px;
+	padding: 30px 60px 30px 60px;
 	box-shadow: 0 0 0.1vw 0.4vw #fff7f7, 0 0 0.4vw 0.6vw #e97272,
 		0 0 4vw 0.4vw #e50b0b, inset 0 0 1.5vw 0.4vw #e50b0b,
 		inset 0 0 0.4vw 0.2vw #e97272, inset 0 0 0.5vw 0.2vw #fff7f7;
