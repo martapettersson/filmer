@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledHeadline = styled.p`
-	font-family: "Neonderthaw", cursive;
+	text-align: center;
+	font-family: ${(props) => (props.neon ? "Neonderthaw, cursive" : "inherit")};
 	font-size: ${(props) => {
 		switch (props.size) {
 			case 1:
-				return "42px";
+				return "58px";
 			case 2:
 				return "24px";
 			default:
