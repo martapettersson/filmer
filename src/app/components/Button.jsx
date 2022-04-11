@@ -9,6 +9,7 @@ const DefaultButton = styled.button`
 	width: 200px;
 	height: 50px;
 	font-size: 16px;
+	font-weight: 500;
 `;
 
 export default function Button(props) {
