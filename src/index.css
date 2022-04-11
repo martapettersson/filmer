@@ -27,7 +27,7 @@ body {
 .container {
 	display: grid;
 	margin: 5vw;
-	grid-row-gap: 1vw;
+	grid-row-gap: 3vw;
 	justify-content: center;
 	justify-items: center;
 }
