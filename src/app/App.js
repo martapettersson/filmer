@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Headline from "./components/Headline";
 import DownloadPage from "./pages/DownloadPage";
 import MoviePage from "./pages/MoviePage";
 import { getMovies } from "./utils/fetch";
@@ -16,6 +17,7 @@ export default function App() {
 	}
 	return (
 		<div className="container">
+			<Headline title="Toppfilmer just nu" size={1} />
 			{moviePages ? (
 				<MoviePage moviePages={moviePages} />
 			) : (
