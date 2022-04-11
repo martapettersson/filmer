@@ -1,10 +1,14 @@
 import React from "react";
+import OrderedList from "../components/OrderedList";
 
 export default function MoviePage({ moviePages }) {
 	let movies = [];
 	for (let page of moviePages) {
 		page.results?.map((res) => movies.push(res));
 	}
-	console.log(movies);
-	return <>movies</>;
+	return (
+		<>
+			<OrderedList movies={movies} />
+		</>
+	);
 }
