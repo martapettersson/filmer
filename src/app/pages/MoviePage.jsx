@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import OrderedList from "../components/OrderedList";
 
 export default function MoviePage({ moviePages }) {
