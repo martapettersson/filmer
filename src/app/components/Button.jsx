@@ -12,14 +12,13 @@ const DefaultButton = styled.button`
 	font-weight: 500;
 `;
 
-export default function Button(props) {
-	let onClick = props.onClick || null,
-		title = props.title || "title",
-		type = props.type || null;
-
+export default function Button({ onClick, title, type }) {
+	let handleClick = onClick || null;
 	const renderButton = () => {
 		if (!type)
-			return <DefaultButton onClick={() => onClick()}>{title}</DefaultButton>;
+			return (
+				<DefaultButton onClick={() => handleClick()}>{title}</DefaultButton>
+			);
 		// else // add other types
 	};
 	return <>{renderButton()}</>;
