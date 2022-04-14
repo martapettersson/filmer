@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const DefaultButton = styled.button`
+const PrimaryButton = styled.button`
 	border: none;
 	padding: 10px;
 	background-color: var(--dark-grey);
@@ -12,14 +12,26 @@ const DefaultButton = styled.button`
 	font-weight: 500;
 `;
 
+const SecondaryButton = styled(PrimaryButton)`
+	background-color: var(--light-grey);
+	color: var(--dark-grey);
+`;
+
 export default function Button({ onClick, title, type }) {
 	let handleClick = onClick || null;
 	const renderButton = () => {
-		if (!type)
-			return (
-				<DefaultButton onClick={() => handleClick()}>{title}</DefaultButton>
-			);
-		// else // add other types
+		switch (type) {
+			case "secondary":
+				return (
+					<SecondaryButton onClick={() => handleClick()}>
+						{title}
+					</SecondaryButton>
+				);
+			default:
+				return (
+					<PrimaryButton onClick={() => handleClick()}>{title}</PrimaryButton>
+				);
+		}
 	};
 	return <>{renderButton()}</>;
 }
