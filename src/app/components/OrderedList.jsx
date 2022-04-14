@@ -17,8 +17,8 @@ export default function OrderedList({ movies }) {
 	return (
 		<NeonBorder>
 			<List>
-				{movies.map((movie, i) => {
-					return <li key={i}>{movie.title}</li>;
+				{movies.map((movie) => {
+					return <li key={movie.id}>{movie.title}</li>;
 				})}
 			</List>
 		</NeonBorder>
