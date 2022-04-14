@@ -1,19 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledHeadline = styled.p`
+const Headline1 = styled.h1`
 	text-align: center;
 	font-family: ${(props) => (props.neon ? "Neonderthaw, cursive" : "inherit")};
-	font-size: ${(props) => {
-		switch (props.size) {
-			case 1:
-				return "58px";
-			case 2:
-				return "24px";
-			default:
-				return "18px";
-		}
-	}};
+	font-size: 58px;
 	color: var(--white);
 	text-shadow: ${(props) =>
 		props.neon
@@ -21,10 +12,15 @@ const StyledHeadline = styled.p`
 			: null};
 `;
 
-export default function Headline({ title, size, neon }) {
-	return (
-		<StyledHeadline neon={neon} size={size}>
-			{title}
-		</StyledHeadline>
-	);
+export default function Headline({ title, type, neon }) {
+	const renderHeadline = () => {
+		switch (type) {
+			case 1:
+				return <Headline1 neon={neon}>{title}</Headline1>;
+			// add more type cases here
+			default:
+				break;
+		}
+	};
+	return <>{renderHeadline()}</>;
 }
